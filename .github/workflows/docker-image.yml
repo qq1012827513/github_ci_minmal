@@ -16,5 +16,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build -t ceeeeeb/test .
+    - name: login dockerhub
+      run: docker login -u ceeeeeb -p dckr_pat_uAAaaqaKtYVNuS_bKwg18x5lcrk
     - name: Push image
       run: docker push ceeeeeb/test
+    
