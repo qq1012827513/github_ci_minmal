@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build -t ceeeeeb/test .
     - name: login dockerhub
-      run: docker login -u ceeeeeb -p dckr_pat_uAAaaqaKtYVNuS_bKwg18x5lcrk
+      run: docker login -u ceeeeeb -p ${{  secrets.DOCKER_HUB_TOKEN  }}
     - name: Push image
       run: docker push ceeeeeb/test
     
